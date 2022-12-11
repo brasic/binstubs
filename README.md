@@ -2,10 +2,12 @@
 
 _Automatically generate binstubs using tools.go_
 
-Binstubs is a nearly zero-configuration way to generate binstubs that execute
-the version of a go command tracked in `go.mod`. So instead of running `go run
-tool@version` which is verbose and causes difficulty when upgrading versions,
-or `go run tool`, which might use the wrong copy, you just run `bin/tool`.
+Binstubs is a nearly zero-configuration way to generate binstubs to execute
+the version of a go command tracked in `go.mod`.
+
+So instead of running `go run tool@version` which is verbose and causes 
+difficulty when upgrading versions, or `go run tool`, which might use the
+wrong version of a tool, you just run `bin/tool`.
 
 1. Create a `tools.go` in the root of your project that looks like this,
    pointing to the executable program path for each dependency:
